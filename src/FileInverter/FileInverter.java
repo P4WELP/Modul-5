@@ -4,7 +4,6 @@ import java.io.*;
 public class FileInverter {
     public boolean invertFile(String filepath) {
         try {
-            // Wczytnie zawartości pliku
             BufferedReader reader = new BufferedReader(new FileReader(filepath));
             StringBuilder content = new StringBuilder();
             String line;
@@ -24,7 +23,6 @@ public class FileInverter {
                 invertedContent.append(words[i]);
             }
 
-            // Zapisanie do nowego pliku
             BufferedWriter writer = new BufferedWriter(new FileWriter("inverted_" + filepath));
             writer.write(invertedContent.toString());
             writer.close();

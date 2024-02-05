@@ -23,4 +23,8 @@ public class Rectangle implements GeometricFigure {
     public int getWidth() {
         return width;
     }
+
+    public int calculatePerimeter() {
+        return 2 * (length + width);
+    }
 }

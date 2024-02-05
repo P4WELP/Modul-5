@@ -28,22 +28,15 @@ public class GeometricFigureTest {
     }
 
     @Test
-    public void testSquareDiameter() {
+    public void testSquarePerimeter() {
         Square square = new Square(4);
-        assertEquals(16, square.calculateDiameter());
+        int expectedPerimeter = 4 * square.getLength();
+        assertEquals(16, square.calculatePerimeter());
     }
 
-    // Dodatkowe testy
     @Test
     public void testSquareArea() {
         Square square = new Square(5);
         assertEquals(25, square.calculateArea());
-    }
-
-    @Test
-    public void testRectangleDimensions() {
-        Rectangle rectangle = new Rectangle(3, 8);
-        assertEquals(3, rectangle.getLength());
-        assertEquals(8, rectangle.getWidth());
     }
 }

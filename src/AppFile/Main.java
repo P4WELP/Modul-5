@@ -14,10 +14,8 @@ public class Main {
             fileName += ".txt";
         }
 
-        // Zapisz tekst do pliku
         boolean writeSuccess = FileWriterClass.writeUserInputToFile(fileName);
 
-        // Jeśli zapis się powiódł odczytuje i wyświetla zawartość pliku
         if (writeSuccess) {
             FileReaderClass.readFromFile(fileName);
         }

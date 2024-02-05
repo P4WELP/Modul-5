@@ -12,17 +12,16 @@ public class TextFileComparator {
             String line2;
 
             while ((line1 = reader1.readLine()) != null && (line2 = reader2.readLine()) != null) {
-                // Porównanie linii z obu plików
+
                 if (!line1.equals(line2)) {
                     return false;
                 }
             }
 
-            // Sprawdzenie czy oba pliki mają taką samą ilość linii
             return reader1.readLine() == null && reader2.readLine() == null;
 
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("Error reading files: " + e.getMessage());
             return false;
         }
     }

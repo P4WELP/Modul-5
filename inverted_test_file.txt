@@ -1,0 +1,1 @@
+.text some contains It. file test a is This
